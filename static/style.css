@@ -1,0 +1,80 @@
+@font-face {
+    font-family: noice;
+    src: url("Obviously-Regular.ttf");
+}
+
+* {
+    background: rgb(34, 0, 44);
+    color: white;
+    font-family: noice;
+}
+
+.input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.209);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 10px 5px;
+    max-width: 300px;
+}
+
+#lang {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.209);
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin: 10px 5px;
+    max-width: 300px;
+}
+
+.labels {
+    margin-top: 20px;
+}
+
+.search_button {
+    border: none;
+    background: rgb(0, 255, 229);
+    color: rgb(34, 0, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+footer {
+    opacity: 0.5;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-main {
+    border: 1px solid yellow;
+    min-width: 40%;
+}
+.left-main {
+    border: 1px solid rgb(0, 255, 89);
+    min-width: 60%;
+}
+
+.profile_img {
+    background: blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.main {
+    background-color:  rgba(255, 0, 0, 0.213);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    padding: 10px;
+}
