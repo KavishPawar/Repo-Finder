@@ -5,11 +5,10 @@
 
     <div class="main">
         <div class="right-main">
-            <form action="" class="form">
+            <form action="/" method="post" class="form">
     
                 <label for="lang" class="labels">Language :</label>
-        
-                <select name="" id="lang">
+                <select name="language" id="lang">
                     <option value="">Any Language</option>
                     <optgroup label="Popular">
                         <option value="C">C</option>
@@ -719,13 +718,13 @@
                 </select>
         
                 <label for="dates" class="labels">Dates :</label>
-                <input id="dates" type="date" class="input" required>
+                <input id="dates" type="date" class="input" name="date" required>
         
                 <label for="stars" class="labels">Stars :</label>
-                <input id="stars" type="text" class="input" required>
+                <input id="stars" type="text" class="input" name="star" required>
         
             </form>
-            <button class="search_button">Search</button>
+            <button class="search_button" type="submit">Search</button>
         </div>
     
         <div class="left-main">
@@ -742,9 +741,45 @@
                     92348789050
                 </p>
             </div>
+            <div class="starCount">
+                <p>
+                    9187493
+                </p>
+            </div>
         </div>
     </div>
     <%- include('./partials/footer.ejs') %>
-    <script src="/script.js"></script>
+    <!-- <script src="/script.js"></script> -->
+    <script>
+        const searchBtn = document.querySelector('.search_button');
+        const inputBox = document.querySelector('#lang');
+        const inputStar = document.querySelector('#stars');
+
+    searchBtn.addEventListener('click', async (e) => {
+        const apiUrl = 'https://api.github.com/search/repositories';
+        const lang = "?q=language:" + inputBox.value;
+        const star = "+stars:" + inputStar.value;
+
+        let arr = [];
+        alert( apiUrl + lang + star );
+        arr.push(apiUrl, lang, star );
+
+        
+        
+        let  = await fetch("/", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                    },
+                body: JSON.stringify(arr)
+            })
+            let rip2 = sendData.json()
+            console.log(rip2);
+            // .then((result)=> result.json())
+            // .then((data)=> console.log(data))
+            // .catch((error)=> console.log)
+    })
+        
+    </script>
 </body>
 </html>
