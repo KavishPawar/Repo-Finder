@@ -56,25 +56,67 @@ footer {
 }
 
 .right-main {
-    border: 1px solid yellow;
-    min-width: 40%;
+    /* border: 1px solid yellow; */
+    padding: 15px;
+    width: 100%;
+    overflow: scroll;
 }
 .left-main {
-    border: 1px solid rgb(0, 255, 89);
-    min-width: 60%;
+    /* background: rgba(198, 0, 202, 0.115); */
+    padding: 15px;
+    width: 100%;
+}
+
+
+
+
+
+.top_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .profile_img {
-    background: blue;
-    width: 100px;
-    height: 100px;
+    background: pink;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
 }
 
-.main {
-    background-color:  rgba(255, 0, 0, 0.213);
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    padding: 10px;
+.profile_name {
+    color: palevioletred;
 }
+
+.main {
+    /* background-color:  rgba(255, 0, 0, 0.213); */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100vh;
+    min-width: 80%;
+    padding: 0px 20px;
+    overflow: hidden;
+}
+
+.main_card {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 14px;
+    margin: 8px 0px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2)); 
+    backdrop-filter: blur(35px);
+    box-shadow: 0 0 2px rgba(48, 48, 48, 0.756);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: none;
+}  

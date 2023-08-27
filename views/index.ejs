@@ -4,7 +4,7 @@
 <body>
 
     <div class="main">
-        <div class="right-main">
+        <div class="left-main">
             <form action="/" method="post" class="form">
     
                 <label for="lang" class="labels">Language :</label>
@@ -727,59 +727,11 @@
             <button class="search_button" type="submit">Search</button>
         </div>
     
-        <div class="left-main">
-            <div class="profile">
-                <img class="profile_img" src="" alt="a pic of profile">
-            </div>
-            <div class="updatedDate">
-                <p>
-                    028470132948
-                </p>
-            </div>
-            <div class="forks">
-                <p>
-                    92348789050
-                </p>
-            </div>
-            <div class="starCount">
-                <p>
-                    9187493
-                </p>
-            </div>
+        <div class="right-main">
+            
         </div>
     </div>
     <%- include('./partials/footer.ejs') %>
-    <!-- <script src="/script.js"></script> -->
-    <script>
-        const searchBtn = document.querySelector('.search_button');
-        const inputBox = document.querySelector('#lang');
-        const inputStar = document.querySelector('#stars');
-
-    searchBtn.addEventListener('click', async (e) => {
-        const apiUrl = 'https://api.github.com/search/repositories';
-        const lang = "?q=language:" + inputBox.value;
-        const star = "+stars:" + inputStar.value;
-
-        let arr = [];
-        alert( apiUrl + lang + star );
-        arr.push(apiUrl, lang, star );
-
-        
-        
-        let  = await fetch("/", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json'
-                    },
-                body: JSON.stringify(arr)
-            })
-            let rip2 = sendData.json()
-            console.log(rip2);
-            // .then((result)=> result.json())
-            // .then((data)=> console.log(data))
-            // .catch((error)=> console.log)
-    })
-        
-    </script>
+    <script src="/script.js"></script>
 </body>
 </html>

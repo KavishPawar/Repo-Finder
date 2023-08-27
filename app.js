@@ -27,23 +27,14 @@ app.get('/', (req,res) => {
 app.use( require("express").json() );
 
 app.post("/", async (req,res) => {
-    // console.log( req.body[1] ); // <== Receives: [ arr ]
-    // console.log( req.body[2] ); // <== Receives: [ arr ]
-    res.status(200).json({ received: req.body });
-
-    // const apiUrl = req.body[0];
-    // const lang = req.body[1];
-    // const star = req.body[2];
+    // res.status(200).json({ received: req.body });//gives response after getting a req. it stops the process and wont process the rest of the code.
+    console.log(req.body);
 
     const finalUrl = req.body[0] + req.body[1] + req.body[2];
-    let ripped = await fetch(finalUrl)
-     let rip = await ripped.json();
-     console.log( rip );
-    //  res.end();
-     res.json(rip.items)
-
-
-    // res.send('index') // Send back a confirmation JSON response
+    let ripped = await fetch(finalUrl)//fetches and stored in the variable ripped.
+    let rip = await ripped.json();//converts the REABABLESTREAM from the fetched varible(ripped) into a javascript object.
+    console.log( rip );
+    res.json(rip.items);//sends the items object from the rip variable to the frontend.(responses the rip.items to the request of the frontend.)
 });
 } )
 
