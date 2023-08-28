@@ -8,7 +8,7 @@
             <form action="/" method="post" class="form">
     
                 <label for="lang" class="labels">Language :</label>
-                <select name="language" id="lang">
+                <select name="language" id="lang" required>
                     <option value="">Any Language</option>
                     <optgroup label="Popular">
                         <option value="C">C</option>
@@ -722,7 +722,10 @@
         
                 <label for="stars" class="labels">Stars :</label>
                 <input id="stars" type="text" class="input" name="star" required>
-        
+                
+                <label for="forks" class="labels">Forks :</label>
+                <input id="forks" type="text" class="input" name="fork" required>
+                
             </form>
             <button class="search_button" type="submit">Search</button>
         </div>
@@ -731,7 +734,7 @@
             
         </div>
     </div>
-    <%- include('./partials/footer.ejs') %>
+    <!-- <%- include('./partials/footer.ejs') %> -->
     <script src="/script.js"></script>
 </body>
 </html>
